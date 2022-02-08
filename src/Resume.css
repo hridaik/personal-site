@@ -1,0 +1,158 @@
+.Resume {
+    display: flex;
+    flex-direction: column;
+    /* font-family: 'Archivo'; */
+    font-family: 'Bebas Neue';
+}
+
+
+.navigation {
+    display: flex;
+    position: fixed;
+    height: 15%;
+    width: 100%;
+    border-bottom: 1px black;
+}
+
+
+.gradborder {
+    height: 1px;
+    width: 100%;
+    top: 14.8%;
+    position: fixed;
+    background: linear-gradient(45deg, white, white, white, #b70b30, white, white, white, white, white);
+    background-size: 500% 500%;
+    animation: gradient 2.5s ease infinite;
+    display: inline-block;
+}
+
+
+
+
+
+.navg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center ;
+    margin-right: 5%;
+}
+
+.nav-textR {
+    font-size: larger;
+    margin-left: 3%;
+    color: white;
+}
+
+.active {
+    font-size: xx-large;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 15%;
+    height: 85%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+    color: white;
+}
+
+
+.res-text {
+    font-family: 'Roboto';
+    font-style: italic;
+    text-align: left;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 0%;
+}
+
+.grey {
+    color: silver   ;
+    font-style: normal;
+}
+
+.res-sub {
+    font-family: 'Roboto';
+    text-align: left;
+    margin-left: 30%;
+    margin-bottom: 0%;
+    margin-top: 0%;
+}
+
+.res-date {
+    font-family: 'Roboto';
+    text-align: left;
+    margin-left: 30%;
+    font-weight: 50;
+    margin-top: 0;
+    color:silver;
+}
+
+.grad {
+    background: linear-gradient(45deg, #e01875, #b70b30, #FFFF, #FFFF);
+    background-clip: text;
+    -webkit-background-clip: text; 
+    -moz-background-clip: text;  
+    -moz-text-fill-color: transparent;  
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    margin-bottom: 0%;
+}
+
+.nav-textR:hover {
+    background: linear-gradient(45deg, #e01875, #b70b30, #FFFF, #FFFF);
+    background-size: 400% 400%;
+    animation: gradient 1.5s ease;
+    background-clip: text;
+    -webkit-background-clip: text; 
+    -moz-background-clip: text;  
+    -moz-text-fill-color: transparent;  
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.logo {
+    color: white;
+    font-size: 3vw;
+    font-family: 'Libre Barcode 39 Text';
+    font-weight: 100;
+    text-align: left;
+}
+
+.home {
+    margin-left: 3%;
+}
+
+
+.home:hover .logo {
+    background: linear-gradient(45deg, #e01875, #b70b30, #FFFF, #FFFF);
+    background-size: 400% 400%;
+    animation: gradient 1.5s ease;
+    background-clip: text;
+    -webkit-background-clip: text; 
+    -moz-background-clip: text;  
+    -moz-text-fill-color: transparent;  
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+   }
+
+
+.navbar {
+    margin-right: 3%;
+    margin-left: 3%;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+

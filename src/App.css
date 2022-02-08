@@ -1,0 +1,165 @@
+.App {
+  display: flex;
+  flex-direction: row;
+  /* font-family: 'Archivo'; */
+  font-family: 'Bebas Neue';
+}
+
+.divider {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  top: 0;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 60%;
+  border-bottom: 1px solid white;
+}
+
+.resume {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 40%;
+  width: 100%;
+}
+
+.nav-text {
+  color: white;
+  font-size: xx-large;
+  text-align: center;
+}
+
+.right {
+  right: 0;
+}
+
+.left {
+  left: 0;
+  border-right: 1px solid white;
+}
+
+.hero-text {
+  color: white;
+  font-size: 7vw;
+  font-family: 'Libre Barcode 39 Text';
+  font-weight: 100;
+  max-width: 50vw;
+  text-align: center;
+}
+
+.cred {
+  color: white;
+  font-size: 4.5vh;
+  font-weight: 100;
+  margin-left: 2%;
+}
+
+.hero:hover .cred {
+  background: linear-gradient(45deg, #e01875, #b70b30, #FFFF, #FFFF, #FFFF);
+  background-size: 400% 400%;
+	animation: gradient 1.5s ease;
+  background-clip: text;
+  -webkit-background-clip: text; 
+  -moz-background-clip: text;  
+  -moz-text-fill-color: transparent;  
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.hero:hover .git { color:#b70b30; }
+
+
+.contact {
+  height: 50%;
+  width: 100%;
+}
+
+.top:hover h1 {
+  background: linear-gradient(45deg, #e01875, #b70b30, #FFFF, #FFFF, #FFFF);
+  background-size: 400% 400%;
+	animation: gradient 1.5s ease;
+  background-clip: text;
+  -webkit-background-clip: text; 
+  -moz-background-clip: text;  
+  -moz-text-fill-color: transparent;  
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.half {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.top {
+  border-bottom: 1px solid white;
+}
+
+.nnn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.links {
+  margin-right: 2%;
+}
+
+.socials:hover {
+  color:#b70b30;
+}
+
+.git:hover { color:#b70b30; }
+
+.nav:hover h1 {
+  background: linear-gradient(45deg, #e01875, #b70b30, #FFFF, #FFFF);
+  background-size: 400% 400%;
+	animation: gradient 1.5s ease;
+  background-clip: text;
+  -webkit-background-clip: text; 
+  -moz-background-clip: text;  
+  -moz-text-fill-color: transparent;  
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+ }
+
+.nav:hover .fa-icon { 
+  color: #b70b30; 
+  animation-name: spin;
+  animation-duration: 900ms;
+  animation-timing-function: linear;
+  transform: rotate(180deg);  
+}
+
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(180deg);
+  }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

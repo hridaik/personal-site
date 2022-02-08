@@ -1,0 +1,128 @@
+.Projects {
+    display: flex;
+    flex-direction: column;
+    /* font-family: 'Archivo'; */
+    font-family: 'Bebas Neue';
+}
+
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    height: 20%;
+    width: 100;
+    border-bottom: 1px solid white;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 15%;
+    height: 85%;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.logo {
+    color: white;
+    font-size: 3vw;
+    font-family: 'Libre Barcode 39 Text';
+    font-weight: 100;
+    max-width: 40vw;
+    text-align: left;
+}
+
+.navpane {
+    height: 100%;
+    width: 20%;
+    border-right: 1px solid white;
+    position: fixed;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* scrollbar-color: #b70b30 black;
+    scrollbar-width: thin; */
+}
+
+.pane-text {
+    font-size: 2.3vw;
+}
+
+.pane-year {
+    font-size: 3vw;
+    color:silver;
+    font-style: italic;
+}
+
+.chosen {
+    font-size: 3vw;
+    background: linear-gradient(45deg, #e01875, #b70b30, #FFFF);
+    background-size: 400% 400%;
+    animation: gradient 3s ease infinite;
+    background-clip: text;
+    -webkit-background-clip: text; 
+    -moz-background-clip: text;  
+    -moz-text-fill-color: transparent;  
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.proj {
+    width: 80%;
+    height: 100%;
+    margin-left: 20.4%;
+}
+
+.info {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid white;
+}
+
+.container {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projdesc {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.imgcon {
+    display: flex;
+}
+
+.desccon {
+    display: flex;
+}
+
+.namecon {
+    width: 45%;
+    height: 100%;
+    text-align: left;
+    margin-left: 5%;
+}
+
+.repocon {
+    width: 50%;
+    height: 100%;
+}
+
