@@ -31,7 +31,7 @@ function App() {
             <a className="links" href="https://www.linkedin.com/in/hridaik/" target="_blank"><FontAwesomeIcon className="socials" icon={faLinkedinIn} color='white' size='2x'/></a>
             <a className="links" href="https://stackexchange.com/users/14140394/hridai-khurana?tab=accounts" target="_blank"><FontAwesomeIcon className="socials" icon={faStackExchange} color='white' size='2x'/></a>
             <NavLink to='/contact' style={{ textDecoration: 'none', marginRight: "2%" }}><FontAwesomeIcon className="socials" icon={faEnvelope} color='white' size='2x'/></NavLink>
-            <a href="" target="_blank"><FontAwesomeIcon className="git" icon={faGithub} color='white' size='2x'/></a>
+            <a href="https://github.com/hridaik/" target="_blank"><FontAwesomeIcon className="git" icon={faGithub} color='white' size='2x'/></a>
           </div>
         </div>
         <NavLink to='/projects' style={{ textDecoration: 'none' }}>
