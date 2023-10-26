@@ -61,8 +61,8 @@ function Projects() {
             </div>
             <span className='gradborder'></span>
 
-
-            <div className='content'>
+            <div className='content'><h1>Work in progress...</h1></div>
+            {/* <div className='content'>
 
                 <div className='navpane'>
                     <div className='pane-div'><h1 className='pane-year'>2022</h1></div>
@@ -106,7 +106,7 @@ function Projects() {
                             )}
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     </motion.div>
     </AnimatePresence>
