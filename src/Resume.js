@@ -44,14 +44,16 @@ function Resume() {
                     <p className='res-text grey'>{aboutText}</p>
                 <h1>Work Experience</h1>
                     <h2 className='res-sub grad'>Product Intern</h2>
-                    <h2 className='res-sub'>StoryProcess</h2>
+                    <h2 className='res-sub'>Schrocken</h2>
                     <h3 className='res-date'>Jun 2023 to Sept 2023</h3>
                         <p className='res-text'>{schrocken}</p>
 
+                    <a id='videoslink'></a>
                     <h2 className='res-sub grad'>Associate</h2>
                     <h2 className='res-sub'>StoryProcess</h2>
                     <h3 className='res-date'>Oct 2021 to May 2023</h3>
                         <p className='res-text'>{storyproc}</p>
+                        <a href='https://vimeo.com/794789295/ff3d0493fe'><p className='res-text'>Example Video</p></a>
                     <h2 className='res-sub grad'>Machine Learning Engineer</h2>
                     <h2 className='res-sub'>Ernst & Young (EY)</h2>
                     <h3 className='res-date'>Dec 2018 to Mar 2019</h3>

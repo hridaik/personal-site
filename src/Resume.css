@@ -20,7 +20,7 @@
     width: 100%;
     top: 14.8%;
     position: fixed;
-    background: linear-gradient(45deg, white, white, white, #b70b30, white, white, white, white, white);
+    background: linear-gradient(45deg, black, black, black, #b70b30, black, black, black, black, black);
     background-size: 500% 500%;
     animation: gradient 2.5s ease infinite;
     display: inline-block;
@@ -41,7 +41,7 @@
 .nav-textR {
     font-size: larger;
     margin-left: 3%;
-    color: white;
+    color: black;
 }
 
 .active {
@@ -58,13 +58,13 @@
     overflow-x: hidden;
     overflow-y: auto;
     text-align: center;
-    color: white;
+    color: black;
 }
 
 
 .res-text {
     font-family: 'Roboto';
-    font-style: italic;
+    font-style: normal;
     text-align: left;
     margin-left: 30%;
     margin-right: 30%;
@@ -72,7 +72,7 @@
 }
 
 .grey {
-    color: silver   ;
+    color: black   ;
     font-style: normal;
 }
 
@@ -90,11 +90,11 @@
     margin-left: 30%;
     font-weight: 50;
     margin-top: 0;
-    color:silver;
+    color:black;
 }
 
 .grad {
-    background: linear-gradient(45deg, #e01875, #b70b30, #FFFF, #FFFF);
+    background: linear-gradient(45deg, #e01875, #b70b30, white, black);
     background-clip: text;
     -webkit-background-clip: text; 
     -moz-background-clip: text;  
@@ -105,7 +105,7 @@
 }
 
 .nav-textR:hover {
-    background: linear-gradient(45deg, #e01875, #b70b30, #FFFF, #FFFF);
+    background: linear-gradient(45deg, #e01875, #b70b30, white, black);
     background-size: 400% 400%;
     animation: gradient 1.5s ease;
     background-clip: text;
@@ -117,7 +117,7 @@
 }
 
 .logo {
-    color: white;
+    color: black;
     font-size: 3vw;
     font-family: 'Libre Barcode 39 Text';
     font-weight: 100;
@@ -130,7 +130,7 @@
 
 
 .home:hover .logo {
-    background: linear-gradient(45deg, #e01875, #b70b30, #FFFF, #FFFF);
+    background: linear-gradient(45deg, #e01875, #b70b30, white, black);
     background-size: 400% 400%;
     animation: gradient 1.5s ease;
     background-clip: text;
