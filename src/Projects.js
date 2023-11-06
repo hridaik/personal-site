@@ -38,7 +38,7 @@ function Projects() {
 
         else {
             setIsSample(false);
-            axios.get('34.236.81.235:5001/projects/'+ String(i)).then((res) => {
+            axios.get('http://34.236.81.235:5001/projects/'+ String(i)).then((res) => {
             console.log('Sent API req');
             console.log(res.data.project_data[0]);
             setProjName(res.data.project_data[0].name);
