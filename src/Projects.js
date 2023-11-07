@@ -11,14 +11,14 @@ import contentimg from './images/website.png';
 
 function Projects() {
     const[isLoading,setisLoading] = useState(false)
-    const[projName,setProjName] = useState('');
+    const[projName,setProjName] = useState('Work Samples');
     const[date,setdate] = useState('');
     const[collab,setcollab] = useState('');
     const[repo,setrepo] = useState('');
     const[active,setactive] = useState('1');
     const[projDesc,setprojDesc] = useState('Select a project from the left');
     const [initialized, setInitialized] = useState(false);
-    const [isSample, setIsSample] = useState(false);
+    const [isSample, setIsSample] = useState(true);
 
     const getData = async (i) => {
         // START LOADING
@@ -142,9 +142,11 @@ function Projects() {
                                  <pre className='formatted'>
                                     Here are some samples of work I have done in internships. The samples given below are publicly available and not binding to any confidentiality agreements.
                                     <ul>
-                                        <a href='https://vimeo.com/794789295/ff3d0493fe'><li>Video for Lenovo & OEM Partner meldCX</li></a>
-                                        <a href='https://vimeo.com/842508780/17e8fe9722'><li>Video for Lenovo & OEM Partner iOmniscient</li></a>
-                                        <a href=''><li>Video for LoRa Alliance</li></a>
+                                        <a href='https://intel.ly/40jxwVR' target='_blank'><li>Content for Intel Startup Program's Coffee Table Book</li></a>
+                                        <a href='https://vimeo.com/794789295/ff3d0493fe' target='_blank'><li>Video Script for Lenovo & OEM Partner meldCX</li></a>
+                                        <a href='https://vimeo.com/842508780/17e8fe9722' target='_blank'><li>Video Script for Lenovo & OEM Partner iOmniscient</li></a>
+
+                                        {/* <a href=''><li>Video for LoRa Alliance</li></a> */}
                                     </ul>
                                  </pre>
                                  ) : 
