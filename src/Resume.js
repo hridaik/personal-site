@@ -4,15 +4,14 @@ import {NavLink} from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 
 
-const aboutText = 'Biotech student at IIT Madras, deeply interested in entrepreneurship and technology. Worked with ventures to help with their storytelling. Simplifying complex deep tech concepts and crafting engaging stories for startups, with practical technology experience to enhance my understanding and insights.';
-
+const aboutText = 'Biotech undergraduate at IIT Madras. Practiced business storytelling (simplifying complex tech concepts and crafting engaging stories), exposed to business models and entrepreneurship, and well-versed with application development (AI/ML and cloud). Leveraging my practical technology experience to enhance my understanding and insights. Looking to grow as an all-round business professional.';
 const storyproc = 'Providing a link between our tech and business teams, making sure our product is matching customer expectation and our vision, from functionality to usability. On the tech side, a lot of NLP, working with GPT3, music generation with Magenta/TensorFlow, managing a nodeJS backend and implementing a no-code frontend and database in bubble.io. On the business side, worked on everything from prospecting, handling sales calls, content writing, as well as client calls after closing the sale. Storytelling as a science, not necessarily an art.';
 const ey = 'Worked on an ad-hoc IoT project for detecting transport mode in phones (car, bike, walking etc.) for measuring human inefficiency in perishable product supply chains. Used python for training a machine learning model, achieving an accuracy of over 85% in the first iteration. Also included integrating the model into the core API/front end of the RoboTrack app.';
 const bw = 'Worked on the sidelines from top to bottom of the sales funnel, from lead generation to closing sales. Managed email campaigns, social media accounts and worked on content SEO on the marketing side. Attended and observed from sales calls throughout the client lifecycle.';
 const hal = 'Porting of software/algorithms from R to Python, writing up design for an IP patent, and testing for IoT devices. ';
 const iit = 'Dual Degree - Biotechnology, 2021-2026';
 const schrocken = 'Worked with the Head of Product to help design the functionality and UI of Schrocken’s MVP for Cell and Gene Therapy applications. Solely revamped their messaging and content on their website, using storytelling techniques for an engaging, easy-to-understand user experience tailored to the target demographic for each webpage.';
-
+const eyCon = 'Went on-site to the production facility to help identify automation opportunities and implementation strategies in the QMS processes of a major construction equipment manufacturer.'
 
 
 function Resume() {
@@ -43,6 +42,11 @@ function Resume() {
                 <h1>About</h1>
                     <p className='res-text grey'>{aboutText}</p>
                 <h1>Work Experience</h1>
+                <h2 className='res-sub grad'>Winter Intern, Business Consulting</h2>
+                    <h2 className='res-sub'>EY</h2>
+                    <h3 className='res-date'>Dec 2023 to Jan 2024</h3>
+                        <p className='res-text'>{eyCon}</p>
+
                     <h2 className='res-sub grad'>Product Intern</h2>
                     <h2 className='res-sub'>Schrocken</h2>
                     <h3 className='res-date'>Jun 2023 to Sept 2023</h3>
