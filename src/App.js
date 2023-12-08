@@ -15,11 +15,11 @@ function App() {
         <div className='hero'>
           <h1 className='hero-text'>Hridai Khurana</h1>
           <div className='nnn'><FontAwesomeIcon className="git" icon={faBook} color='black' size="lg"/><h1 className='cred'>IIT MADRAS</h1></div>
-          <div class='nnn'><FontAwesomeIcon className="git" icon={faBriefcase} color='black' size="lg"/><h1 className='cred'>STORYPROCESS</h1></div>
+          <div class='nnn'><FontAwesomeIcon className="git" icon={faBriefcase} color='black' size="lg"/><h1 className='cred'>EY, BUSINESS CONSULTING</h1></div>
         </div>
         <NavLink to='/resume' style={{ textDecoration: 'none' }} >
         <div className='resume nav'>
-          <h1 className ='nav-text'>RESUMÉ</h1>
+          <h1 className ='nav-text'>RESUME</h1>
           <FontAwesomeIcon icon={faAdjust} color='black' className='fa-icon' />
         </div>
         </NavLink>

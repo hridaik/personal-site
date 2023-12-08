@@ -11,7 +11,7 @@ const bw = 'Worked on the sidelines from top to bottom of the sales funnel, from
 const hal = 'Porting of software/algorithms from R to Python, writing up design for an IP patent, and testing for IoT devices. ';
 const iit = 'Dual Degree - Biotechnology, 2021-2026';
 const schrocken = 'Worked with the Head of Product to help design the functionality and UI of Schrocken’s MVP for Cell and Gene Therapy applications. Solely revamped their messaging and content on their website, using storytelling techniques for an engaging, easy-to-understand user experience tailored to the target demographic for each webpage.';
-const eyCon = 'Went on-site to the production facility to help identify automation opportunities and implementation strategies in the QMS processes of a major construction equipment manufacturer.'
+const eyCon = 'Went on-site to the production facility of a major construction equipment manufacturer to help identify automation opportunities and implementation strategies in their QMS processes.'
 
 
 function Resume() {
