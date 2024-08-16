@@ -124,9 +124,10 @@
 .formatted {
     text-align: left;
     margin-left: 1%;
-    font-size: 1vw;
+    font-size: 1.3vw;
     white-space: pre-wrap;
 }
+
 
 
 .namecon {

@@ -35,22 +35,95 @@ function Projects() {
             setisLoading(false);
         }
 
-
-        else {
+        else if (i == 20231) {
             setIsSample(false);
-            axios.get('http://34.236.81.235:5001/projects/'+ String(i)).then((res) => {
-            console.log('Sent API req');
-            console.log(res.data.project_data[0]);
-            setProjName(res.data.project_data[0].name);
-            setdate(res.data.project_data[0].date);
-            setcollab(res.data.project_data[0].collab);
+            setProjName('Protein Unfolding Simulation');
+            setprojDesc('Monte Carlo Metropolis Criterion simulation for polymer/protein unfolding, with different interaction energy values. Done here with a 16-mer.');
+            setcollab('Prof Athi Narayan, IIT Madras');
+            setdate('Jan 2023');
             setInitialized(true);
-            setrepo(res.data.project_data[0].repo);
-            setprojDesc(res.data.project_data[0].content);
+            setrepo('https://github.com/hridaik/PolymerUnfolding');
+
             setisLoading(false);
-            });
-            
         }
+        else if (i == 20241) {
+            setIsSample(false);
+            setProjName('Modelling Cooperativity in Biofilms');
+            setprojDesc('Using a public goods game model to study cooperativity between microorganisms in biofilms with varying factors like age and social contribution');
+            setcollab('None');
+            setdate('Apr 2024');
+            setInitialized(true);
+            setrepo('https://github.com/hridaik/cooperativity');
+
+            setisLoading(false);
+        }
+        else if (i == 20232) {
+            setIsSample(false);
+            setProjName('Story Generator AI');
+            setprojDesc('Playing around with LLMs to generate a story along with representative pictures when given some keywords');
+            setcollab('None');
+            setdate('Apr 2023');
+            setInitialized(true);
+            setrepo('https://github.com/hridaik/story-generator');
+
+            setisLoading(false);
+        }
+        else if (i == 2020) {
+            setIsSample(false);
+            setProjName('Portfolio Website');
+            setprojDesc('A website made mostly as a repository for my projects.');
+            setcollab('None');
+            setdate('Jul 2020');
+            setInitialized(true);
+            setrepo('https://github.com/hridaik/personal-site');
+
+            setisLoading(false);
+        }
+        else if (i == 2019) {
+            setIsSample(false);
+            setProjName('Neuro-Evolution of Augmenting Topologies');
+            setprojDesc('NEAT (NeuroEvolution of Augmenting Topologies) is an evolutionary algorithm that creates artificial neural networks. In this project, I have implemented NEAT to teach the computer to play flappy bird. We can see the progression of the AI as it gets better at playing the game over a few generations.');
+            setcollab('None');
+            setdate('Mar 2019');
+            setInitialized(true);
+            setrepo('https://github.com/hridaik/FlappyBirdNEAT');
+
+            setisLoading(false);
+        }
+        else if (i == 2018) {
+            setIsSample(false);
+            setProjName('ML for Heart Disease');
+            setprojDesc('Using a KNN classifier to detect risk of heart disease, using a dataset that can be found on Kaggle.');
+            setcollab('None');
+            setdate('May 2018');
+            setInitialized(true);
+            setrepo('https://github.com/hridaik/HeartDiseaseRisk');
+
+            setisLoading(false);
+        }
+        else if (i == 2017) {
+            setIsSample(false);
+            setProjName('TicTacToe Game');
+            setprojDesc('A small tic tac toe game I made as one of my first coding projects. Can be played with two players or vs the computer.');
+            setcollab('None');
+            setdate('Mar 2017');
+            setInitialized(true);
+            setrepo('https://github.com/hridaik/TicTacToe');
+
+            setisLoading(false);
+        }
+        else if (i == 2011) {
+            setIsSample(false);
+            setProjName('Ecommerce Website');
+            setprojDesc("My first real technical project, I made this website when I was 8 to sell things I didn't want anymore. You can order things by publicly sharing your address, name and phone number in the comments section. I also claim to provide free home delivery, when most products are valued at ~$2. Used MS Paint for the design and WordPress for web hosting.");
+            setcollab('None');
+            setdate('Nov 2011');
+            setInitialized(true);
+            setrepo('https://flickrdelivery.wordpress.com/');
+
+            setisLoading(false);
+        }
+
         // STOP LOADING
         if (active!==i.toString()){
             document.getElementById(active).className = 'pane-text';
@@ -90,6 +163,9 @@ function Projects() {
 
 
                 <div className='pane-div'><a href="#" onClick={() => getData(69)} style={{ textDecoration: 'none', color: 'white' }}><h1 id='worksample' className='pane-text'>Work Samples</h1></a></div>
+   
+                <div className='pane-div'><h1 className='pane-year'>2024</h1></div>
+                    <div className='pane-div'><a href="#" onClick={() => getData(20241)} style={{ textDecoration: 'none', color: 'white' }}><h1 id='2020' className='pane-text'>Modelling Biofilms</h1></a></div>
 
                     <div className='pane-div'><h1 className='pane-year'>2023</h1></div>
                         <div className='pane-div'><a href="#" onClick={() => getData(20231)} style={{ textDecoration: 'none', color: 'white' }}><h1 id='20231' className='pane-text'>Protein Unfolding</h1></a></div>
@@ -140,7 +216,7 @@ function Projects() {
                                 {isSample ?
                                  (
                                  <pre className='formatted'>
-                                    Here are some samples of work I have done in internships. The samples given below are publicly available and not binding to any confidentiality agreements.
+                                    Here are some samples of work I have done in internships. The samples given below are publicly available and not binding to any confidentiality agreements. Broken links may indicate the owner has removed the content.
                                     <ul>
                                         <a href='https://intel.ly/40jxwVR' target='_blank'><li>Content for Intel Startup Program's Coffee Table Book</li></a>
                                         <a href='https://vimeo.com/794789295/ff3d0493fe' target='_blank'><li>Video Script for Lenovo & OEM Partner meldCX</li></a>

@@ -14,8 +14,8 @@ function App() {
       <div className='divider left'>
         <div className='hero'>
           <h1 className='hero-text'>Hridai Khurana</h1>
-          <div className='nnn'><FontAwesomeIcon className="git" icon={faBook} color='black' size="lg"/><h1 className='cred'>IIT MADRAS</h1></div>
-          <div class='nnn'><FontAwesomeIcon className="git" icon={faBriefcase} color='black' size="lg"/><h1 className='cred'>EY, BUSINESS CONSULTING</h1></div>
+          <div className='nnn'><FontAwesomeIcon className="git" icon={faBook} color='black' size="lg"/><h1 className='cred'>BIOTECH + COMP ENG, IIT MADRAS</h1></div>
+          <div class='nnn'><FontAwesomeIcon className="git" icon={faBriefcase} color='black' size="lg"/><h1 className='cred'>CELLFORMA</h1></div>
         </div>
         <NavLink to='/resume' style={{ textDecoration: 'none' }} >
         <div className='resume nav'>
