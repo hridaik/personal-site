@@ -9,7 +9,7 @@ import * as emailjs from '@emailjs/browser';
 function Contact() {
     function sendEmail(e) {
         e.preventDefault();        
-        emailjs.sendForm('service_li5oav1', 'template_5q59b5z',  e.target, 'user_L7FSFpbN3ZexBSgqshdU0')
+        emailjs.sendForm('service_v6rj7v8', 'template_5kg3tp5',  e.target, '0-rpvpjMCv54k9ehy')
             .then((result) => {
                 alert('Email sent successfully! I will reply ASAP');
             }, (error) => {

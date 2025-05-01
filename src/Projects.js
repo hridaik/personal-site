@@ -34,7 +34,29 @@ function Projects() {
 
             setisLoading(false);
         }
+        else if (i == 20251) {
+            setIsSample(false);
+            setProjName('Tailor Agent');
+            setprojDesc("AI agent to create personalized messages. This agent is currently optimized for reaching out to researchers. Given a list of researchers/PIs, and your interests, the agent will pick the most relevant papers from the researcher's lab and write a personalized message/email using an example template, mentioning your interest in the researcher's work. Returns a CSV with the most relevant papers and personalized message.");
+            setcollab('None');
+            setdate('Feb 2025');
+            setInitialized(true);
+            setrepo('https://github.com/hridaik/tailor-agent');
 
+            setisLoading(false);
+        }
+
+        else if (i == 20252) {
+            setIsSample(false);
+            setProjName('AI Evolution Simulation');
+            setprojDesc('Simulating evolution using an open 2D world for simple MLPs to explore and evolve in behaviour without any hard coding, using NeuroEvolution of Augmenting Topologies (NEAT). More info is on the GitHub README. Ongoing.');
+            setcollab('None');
+            setdate('Apr 2025');
+            setInitialized(true);
+            setrepo('https://github.com/hridaik/neat-agents');
+
+            setisLoading(false);
+        }
         else if (i == 20231) {
             setIsSample(false);
             setProjName('Protein Unfolding Simulation');
@@ -46,6 +68,29 @@ function Projects() {
 
             setisLoading(false);
         }
+
+        else if (i == 20244) {
+            setIsSample(false);
+            setProjName('Oscillatory Auditory Cortex');
+            setprojDesc('Modelling the auditory cortex using a Convolutional Neural Network using Hopf oscillators in neurons in place of standard activation functions. The oscillators model the behaviour of local neuron field potentials (LFPs), hence each neuron acts like a group of neurons in the brain.');
+            setcollab('None');
+            setdate('Dec 2024');
+            setInitialized(true);
+            setrepo('https://github.com/hridaik/auditory-cortex');
+
+            setisLoading(false);
+        }
+        else if (i == 20243) {
+            setIsSample(false);
+            setProjName('PAC in Oscillatory ANNs');
+            setprojDesc('Exploring phase-amplitude cross frequency coupling in an artificial deep oscillatory neural network, when given different tasks.');
+            setcollab('None');
+            setdate('Oct 2024');
+            setInitialized(true);
+            setrepo('https://github.com/hridaik/Oscillatory-NN-PAC');
+
+            setisLoading(false);
+        }
         else if (i == 20241) {
             setIsSample(false);
             setProjName('Modelling Cooperativity in Biofilms');
@@ -54,6 +99,17 @@ function Projects() {
             setdate('Apr 2024');
             setInitialized(true);
             setrepo('https://github.com/hridaik/cooperativity');
+
+            setisLoading(false);
+        }
+        else if (i == 20242) {
+            setIsSample(false);
+            setProjName('Leak Detection in Distribution Systems');
+            setprojDesc('This project addresses the problem of fault and leak detection in modern water distribution systems using machine learning. Traditional manual monitoring techniques are slow, error-prone, and inadequate for identifying subtle system failures in real time. Using sensor and actuator data from the WADI dataset (iTrust, Singapore University of Technology and Design), I built supervised machine learning models to automatically classify system states as either normal or defective. I trained and compared two classifiers, Random Forest and XGBoost, on precision, recall, F1-score, and ROC-AUC. Both models achieved near-perfect recall and precision, with Random Forest slightly outperforming XGBoost on false positives. The models were also analyzed for feature importance and sensor correlation to gain insights into fault indicators.');
+            setcollab('None');
+            setdate('Sep 2024');
+            setInitialized(true);
+            setrepo('https://github.com/hridaik/wadi-fault-detection');
 
             setisLoading(false);
         }
@@ -163,8 +219,16 @@ function Projects() {
 
 
                 <div className='pane-div'><a href="#" onClick={() => getData(69)} style={{ textDecoration: 'none', color: 'white' }}><h1 id='worksample' className='pane-text'>Work Samples</h1></a></div>
-   
+
+                <div className='pane-div'><h1 className='pane-year'>2025</h1></div>
+                    <div className='pane-div'><a href="#" onClick={() => getData(20251)} style={{ textDecoration: 'none', color: 'white' }}><h1 id='2020' className='pane-text'>Cold Mail AI Agent</h1></a></div>
+                    <div className='pane-div'><a href="#" onClick={() => getData(20252)} style={{ textDecoration: 'none', color: 'white' }}><h1 id='2020' className='pane-text'>AI Evolution Sim</h1></a></div>                
+                
+                
                 <div className='pane-div'><h1 className='pane-year'>2024</h1></div>
+                    <div className='pane-div'><a href="#" onClick={() => getData(20244)} style={{ textDecoration: 'none', color: 'white' }}><h1 id='2020' className='pane-text'>Auditory Cortex</h1></a></div>
+                    <div className='pane-div'><a href="#" onClick={() => getData(20243)} style={{ textDecoration: 'none', color: 'white' }}><h1 id='2020' className='pane-text'>Phase Amplitude Coupling</h1></a></div>
+                    <div className='pane-div'><a href="#" onClick={() => getData(20242)} style={{ textDecoration: 'none', color: 'white' }}><h1 id='2020' className='pane-text'>Leak Detection</h1></a></div>
                     <div className='pane-div'><a href="#" onClick={() => getData(20241)} style={{ textDecoration: 'none', color: 'white' }}><h1 id='2020' className='pane-text'>Modelling Biofilms</h1></a></div>
 
                     <div className='pane-div'><h1 className='pane-year'>2023</h1></div>
