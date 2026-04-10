@@ -1,8 +1,8 @@
 .App {
   display: flex;
   flex-direction: row;
-  /* font-family: 'Archivo'; */
   font-family: 'Bebas Neue';
+  height: 100vh;
 }
 
 .divider {
@@ -48,7 +48,7 @@
 
 .hero-text {
   color: black;
-  font-size: 7vw;
+  font-size: clamp(2rem, 7vw, 5rem);
   font-family: 'Libre Barcode 39 Text';
   font-weight: 100;
   max-width: 50vw;
@@ -57,7 +57,7 @@
 
 .cred {
   color: black;
-  font-size: 4.5vh;
+  font-size: clamp(0.9rem, 4.5vh, 2rem);
   font-weight: 100;
   margin-left: 2%;
 }
@@ -65,31 +65,25 @@
 .hero:hover .cred {
   background: linear-gradient(45deg, #e01875, #b70b30, white, black);
   background-size: 400% 400%;
-	animation: gradient 1.5s ease;
+  animation: gradient 1.5s ease;
   background-clip: text;
-  -webkit-background-clip: text; 
-  -moz-background-clip: text;  
-  -moz-text-fill-color: transparent;  
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
 
-.hero:hover .git { color:#b70b30; }
-
-
-.contact {
-  height: 50%;
-  width: 100%;
-}
+.hero:hover .git { color: #b70b30; }
 
 .top:hover h1 {
   background: linear-gradient(45deg, #e01875, #b70b30, white, black);
   background-size: 400% 400%;
-	animation: gradient 1.5s ease;
+  animation: gradient 1.5s ease;
   background-clip: text;
-  -webkit-background-clip: text; 
-  -moz-background-clip: text;  
-  -moz-text-fill-color: transparent;  
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
@@ -113,53 +107,136 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  flex-wrap: wrap;
+  gap: 0.25rem;
 }
 
 .links {
   margin-right: 2%;
 }
 
-.socials:hover {
-  color:#b70b30;
-}
-
-.git:hover { color:#b70b30; }
+.socials:hover { color: #b70b30; }
+.git:hover { color: #b70b30; }
 
 .nav:hover h1 {
   background: linear-gradient(45deg, #e01875, #b70b30, white, black);
   background-size: 400% 400%;
-	animation: gradient 1.5s ease;
+  animation: gradient 1.5s ease;
   background-clip: text;
-  -webkit-background-clip: text; 
-  -moz-background-clip: text;  
-  -moz-text-fill-color: transparent;  
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
   display: inline-block;
- }
+}
 
-.nav:hover .fa-icon { 
-  color: #b70b30; 
+.nav:hover .fa-icon {
+  color: #b70b30;
   animation-name: spin;
   animation-duration: 900ms;
   animation-timing-function: linear;
-  transform: rotate(180deg);  
+  transform: rotate(180deg);
 }
 
+/* NavLink anchors wrapping the Resume and Projects tiles on the home page.
+   These need explicit display so the flex/block children inside them work. */
+.resume-link,
+.projects-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
 
 @keyframes spin {
-  from {
-      transform:rotate(0deg);
-  }
-  to {
-      transform:rotate(180deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(180deg); }
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .App {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .divider {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left {
+    border-right: none;
+    border-bottom: 1px solid black;
+  }
+
+  /* Use flex ratios so children fill the divider regardless of parent display type.
+     hero:resume = 3:2 = 60%:40% */
+  .hero {
+    flex: 3;
+    height: auto;
+  }
+
+  /* The NavLink anchor must be a flex item AND a flex container so .resume fills it.
+     Specificity of .resume-link (0,1,0) is now higher than the old .divider > a rule
+     which has been replaced with .resume-link,.projects-link in the base styles. */
+  .resume-link {
+    flex: 2;
+    display: flex !important;   /* override base block; !important needed because
+                                   both selectors now have equal specificity (0,1,0)
+                                   and the base rule comes later in the file */
+    width: 100%;
+  }
+
+  .resume {
+    flex: 1;
+    height: auto;
+    border-top: 1px solid black;
+  }
+
+  /* Contact:Projects = 1:1 = 50%:50% */
+  .half.top {
+    flex: 1;
+    height: auto;
+  }
+
+  .projects-link {
+    flex: 1;
+    display: flex !important;
+    width: 100%;
+  }
+
+  .half.nav {
+    flex: 1;
+    height: auto;
+  }
+
+  .hero-text {
+    font-size: clamp(2rem, 12vw, 3.5rem);
+    max-width: 90vw;
+  }
+
+  .cred {
+    font-size: clamp(0.7rem, 3vw, 1rem);
+    margin-left: 1%;
+  }
+
+  .nav-text {
+    font-size: large;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
 }

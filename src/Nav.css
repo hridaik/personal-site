@@ -1,0 +1,138 @@
+/* Sticky wrapper holds both the nav bar and the gradient border,
+   so the border stays visible when the page scrolls */
+.nav-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #d3d3d3;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid black;
+    background: #d3d3d3;
+    box-sizing: border-box;
+}
+
+.gradborder {
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, black, black, black, #b70b30, black, black, black, black, black);
+    background-size: 500% 100%;
+    animation: gradient 2.5s ease infinite;
+    display: block;
+}
+
+.navg {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 5%;
+    flex-wrap: nowrap;
+    gap: 0.25rem;
+}
+
+.nav-textR {
+    font-size: larger;
+    margin-left: 3%;
+    color: black;
+    white-space: nowrap;
+}
+
+.nav-textR.active {
+    font-size: xx-large;
+}
+
+.nav-textR:hover {
+    background: linear-gradient(45deg, #e01875, #b70b30, white, black);
+    background-size: 400% 400%;
+    animation: gradient 1.5s ease;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.logo {
+    color: black;
+    font-size: 3vw;
+    font-family: 'Libre Barcode 39 Text';
+    font-weight: 100;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.home {
+    margin-left: 3%;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.home:hover .logo {
+    background: linear-gradient(45deg, #e01875, #b70b30, white, black);
+    background-size: 400% 400%;
+    animation: gradient 1.5s ease;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.navbar {
+    margin-right: 3%;
+    margin-left: 3%;
+    text-decoration: none;
+}
+
+@keyframes gradient {
+    0% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: clamp(0.9rem, 5vw, 1.4rem);
+    }
+
+    .home {
+        margin-left: 2%;
+        flex-shrink: 0;
+    }
+
+    .navbar {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Same size for active and inactive — no size jump that could push layout */
+    .nav-textR {
+        font-size: 0.72rem;
+        margin-left: 0;
+        white-space: nowrap;
+    }
+
+    .nav-textR.active {
+        font-size: 0.72rem;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+
+    .navg {
+        margin-right: 2%;
+        gap: 0.5rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gradborder { animation: none; }
+    .nav-textR:hover { animation: none; }
+    .home:hover .logo { animation: none; }
+}

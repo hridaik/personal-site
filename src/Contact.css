@@ -1,14 +1,18 @@
+.ContactPage {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Bebas Neue';
+    min-height: 100vh;
+}
+
 .contentC {
     display: flex;
     flex-direction: column;
-    position: fixed;
-    top: 15%;
-    height: 85%;
-    width: 100%;
     overflow-x: hidden;
     overflow-y: auto;
     text-align: center;
     color: black;
+    padding: 2rem 1rem;
 }
 
 .formdiv {
@@ -20,7 +24,6 @@
     margin-right: 2%;
 }
 
-
 .subbutton {
     margin-top: 3%;
     text-decoration: none;
@@ -29,28 +32,33 @@
     font-family: 'Bebas Neue';
     font-size: larger;
     border: 1px solid white;
+    cursor: pointer;
+    padding: 0.4rem 1rem;
 }
 
+.subbutton:focus-visible {
+    outline: 2px solid #b70b30;
+    outline-offset: 2px;
+}
 
 .subbutton span:hover {
-    background: black;
-    height: 100%;
-    width: 100%;
     background: linear-gradient(90deg, white, white, white, #b70b30, white, white, white, white, white);
     background-size: 400% 400%;
     animation: gradient 2s ease infinite;
     background-clip: text;
-    -webkit-background-clip: text; 
-    -moz-background-clip: text;  
-    -moz-text-fill-color: transparent;  
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
     -webkit-text-fill-color: transparent;
     display: inline-block;
 }
 
-
 .nameform {
-    outline:none;
+    outline: none;
     font-family: 'Roboto';
+    font-size: 1rem;
+    padding: 0.3rem 0.5rem;
+    box-sizing: border-box;
 }
 
 .nameform:focus {
@@ -58,12 +66,31 @@
     border-radius: 3px;
 }
 
+@media (max-width: 768px) {
+    .formlabel {
+        display: block;
+        margin-bottom: 0.3rem;
+        margin-right: 0;
+        text-align: left;
+    }
+
+    .nameform {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .formdiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 @keyframes gradient {
-    0% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+    0% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
 }
