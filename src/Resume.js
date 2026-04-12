@@ -4,7 +4,7 @@ import Nav from './Nav';
 import { AnimatePresence, motion } from 'framer-motion';
 
 
-const aboutText = 'Biotech and computational engineering undergraduate at IIT Madras. Venturing into cutting-edge biology research with a software and AI technology background.';
+const aboutText = 'Biotech and computational engineering undergraduate at IIT Madras. Venturing into cutting-edge biology research with a AI technology background.';
 const storyproc = 'Providing a link between our tech and business teams, making sure our product is matching customer expectation and our vision, from functionality to usability. On the tech side, a lot of NLP, working with GPT3, music generation with Magenta/TensorFlow, managing a nodeJS backend and implementing a no-code frontend and database in bubble.io. On the business side, worked on everything from prospecting, handling sales calls, content writing, as well as client calls after closing the sale. Storytelling as a science, not necessarily an art.';
 const ey = 'Worked on an ad-hoc IoT project for detecting transport mode in phones (car, bike, walking etc.) for measuring human inefficiency in perishable product supply chains. Used python for training a machine learning model, achieving an accuracy of over 85% in the first iteration. Also included integrating the model into the core API/front end of the RoboTrack app.';
 const bw = 'Worked on the sidelines from top to bottom of the sales funnel, from lead generation to closing sales. Managed email campaigns, social media accounts and worked on content SEO on the marketing side. Attended and observed from sales calls throughout the client lifecycle.';

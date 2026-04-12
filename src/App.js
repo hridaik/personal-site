@@ -15,7 +15,7 @@ function App() {
         <div className='hero'>
           <h1 className='hero-text'>Hridai Khurana</h1>
           <div className='nnn'><FontAwesomeIcon className="git" icon={faBook} color='black' size="lg"/><h1 className='cred'>BIOTECH + COMP ENG, IIT MADRAS</h1></div>
-          <div className='nnn'><FontAwesomeIcon className="git" icon={faBriefcase} color='black' size="lg"/><h1 className='cred'>CELLFORMA</h1></div>
+          <div className='nnn'><FontAwesomeIcon className="git" icon={faBriefcase} color='black' size="lg"/><h1 className='cred'>EMBL Rome</h1></div>
         </div>
         <NavLink to='/resume' className='resume-link' style={{ textDecoration: 'none' }} >
         <div className='resume nav'>
@@ -26,7 +26,15 @@ function App() {
       </div>
       <div className='divider right'>
         <div className='half top'>
-          <h1 className='nav-text'>REACH OUT TO ME</h1>
+          <NavLink to='/projects' className='projects-link' style={{ textDecoration: 'none' }}>
+            <div className='full nav'>
+              <h1 className='nav-text'>PROJECTS</h1>
+              <FontAwesomeIcon icon={faAdjust} color='black' className='fa-icon' />
+            </div>
+          </NavLink>
+        </div>
+        <div className='half top'>
+        <h1 className='nav-text'>REACH OUT TO ME</h1>
           <div className='nnn'>
             <a className="links" href="https://www.linkedin.com/in/hridaik/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FontAwesomeIcon className="socials" icon={faLinkedinIn} color='black' size='2x'/></a>
             <a className="links" href="https://stackexchange.com/users/14140394/hridai-khurana?tab=accounts" target="_blank" rel="noopener noreferrer" aria-label="Stack Exchange"><FontAwesomeIcon className="socials" icon={faStackExchange} color='black' size='2x'/></a>
@@ -34,12 +42,6 @@ function App() {
             <a href="https://github.com/hridaik/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FontAwesomeIcon className="git" icon={faGithub} color='black' size='2x'/></a>
           </div>
         </div>
-        <NavLink to='/projects' className='projects-link' style={{ textDecoration: 'none' }}>
-        <div className='half nav'>
-          <h1 className='nav-text'>PROJECTS</h1>
-          <FontAwesomeIcon icon={faAdjust} color='black' className='fa-icon' />
-        </div>
-        </NavLink>
       </div>
     </div>
   </motion.div>

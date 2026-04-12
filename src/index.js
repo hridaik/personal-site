@@ -5,6 +5,7 @@ import App from './App';
 import Projects from './Projects';
 import Resume from './Resume';
 import Contact from './Contact';
+import Blog from './Blog';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 
@@ -15,6 +16,7 @@ ReactDOM.render(
       <Route path="/projects" element={<Projects />} />
       <Route path="/resume" element={<Resume />} />
       <Route path='/contact' element={<Contact />} />
+      <Route path='/blog' element={<Blog />} />
     </Routes>
   </Router>,
   document.getElementById('root')
