@@ -1,21 +1,18 @@
 import './Contact.css';
-import React from "react";
+import { useState } from "react";
 import Nav from './Nav';
 import { AnimatePresence, motion } from 'framer-motion';
-import * as emailjs from '@emailjs/browser';
 
-
+const EMAIL = 'hridaikhurana@gmail.com';
 
 function Contact() {
-    function sendEmail(e) {
-        e.preventDefault();
-        emailjs.sendForm('service_v6rj7v8', 'template_5kg3tp5', e.target, '0-rpvpjMCv54k9ehy')
-            .then(() => {
-                alert('Email sent successfully! I will reply ASAP');
-            }, () => {
-                alert('Error sending email');
-            });
-        e.target.reset();
+    const [copied, setCopied] = useState(false);
+
+    function copyEmail() {
+        navigator.clipboard.writeText(EMAIL).then(() => {
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2000);
+        });
     }
 
     return (
@@ -25,21 +22,11 @@ function Contact() {
             <Nav current="contact" />
 
             <div className='contentC'>
-                <form onSubmit={sendEmail} name='emailform'>
-                    <div className="formdiv">
-                        <label className='formlabel' htmlFor='name'>Name</label>
-                        <input className='nameform' id='name' type='text' name='from_name' placeholder='Your name' required />
-                    </div>
-                    <div className="formdiv">
-                        <label className='formlabel' htmlFor='email'>Email</label>
-                        <input className='nameform' id='email' type='email' name='reply_to' placeholder='Your email' required />
-                    </div>
-                    <div className="formdiv">
-                        <label className='formlabel' htmlFor='message'>Message</label>
-                        <textarea className='nameform' id='message' name='message' placeholder="Let's talk..." required />
-                    </div>
-                    <button className='subbutton' type='submit'><span>Send</span></button>
-                </form>
+                <p className='contactTagline'>Feel free to reach out - I'd love to hear from you.</p>
+                <a className='contactEmail' href={`mailto:${EMAIL}`}>{EMAIL}</a>
+                <button className='subbutton copyBtn' onClick={copyEmail}>
+                    <span>{copied ? 'Copied!' : 'Copy Email'}</span>
+                </button>
             </div>
         </div>
     </motion.div>

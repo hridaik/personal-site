@@ -31,7 +31,7 @@
 }
 
 .blog-subtitle {
-    font-family: 'Roboto';
+    font-family: 'Inter';
     font-size: 1.1rem;
     font-style: italic;
     color: #444;
@@ -41,7 +41,7 @@
 }
 
 .blog-date {
-    font-family: 'Roboto';
+    font-family: 'Inter';
     font-size: 0.82rem;
     color: #888;
     letter-spacing: 0.06em;
@@ -76,7 +76,7 @@
 
 /* ── Subheadings ── */
 .blog-subheading {
-    font-family: 'Roboto';
+    font-family: 'Inter';
     font-size: 1.05rem;
     font-weight: 700;
     margin-top: 1.6rem;
@@ -86,7 +86,7 @@
 
 /* ── Body text ── */
 .blog-body {
-    font-family: 'Roboto';
+    font-family: 'Inter';
     font-size: 0.97rem;
     line-height: 1.75;
     color: #1a1a1a;
@@ -104,7 +104,7 @@
 }
 
 .blog-pullquote p {
-    font-family: 'Roboto';
+    font-family: 'Inter';
     font-size: 1.1rem;
     font-style: italic;
     line-height: 1.6;
@@ -124,7 +124,7 @@
 }
 
 .blog-caption {
-    font-family: 'Roboto';
+    font-family: 'Inter';
     font-size: 0.78rem;
     color: #666;
     margin-top: 0.4rem;

@@ -15,6 +15,29 @@
     padding: 2rem 1rem;
 }
 
+.contactTagline {
+    font-family: 'Inter';
+    font-size: 1.1rem;
+    margin: 3rem 0 1rem;
+    font-weight: normal;
+}
+
+.contactEmail {
+    font-family: 'Bebas Neue';
+    font-size: 2rem;
+    color: black;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+}
+
+.contactEmail:hover {
+    color: #b70b30;
+}
+
+.copyBtn {
+    margin-top: 1.5rem;
+}
+
 .formdiv {
     margin-top: 5%;
 }
@@ -55,7 +78,7 @@
 
 .nameform {
     outline: none;
-    font-family: 'Roboto';
+    font-family: 'Inter';
     font-size: 1rem;
     padding: 0.3rem 0.5rem;
     box-sizing: border-box;

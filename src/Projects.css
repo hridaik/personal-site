@@ -119,7 +119,7 @@
     margin: 0;
     font-size: clamp(0.75rem, 1.3vw, 1rem);
     white-space: pre-wrap;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     width: 100%;
 }
 
