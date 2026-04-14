@@ -16,6 +16,7 @@ import ReactMarkdown from 'react-markdown';
 //   { type: 'video',      src: '...', caption: '...' }   ← responsive iframe embed
 //   { type: 'divider' }                             ← thin horizontal rule
 // ─────────────────────────────────────────────────────────────────────────────
+
 const POST = {
     title: 'Fleeing is Believing',
     subtitle: 'Building a normative, interpretable model of general mouse behavior - starting with defensive behavior',
@@ -33,7 +34,7 @@ const POST = {
             type: 'paragraph',
             text: 'What follows is the MVP/PoC version of that. In principle, the architecture shown here could be extended to cover a range of behavioral domains.'
         },
-        { type: 'divider'},
+        { type: 'divider' },
         {
             type: 'image',
             src: '/localassets/mousehead.jpg',
@@ -47,10 +48,10 @@ const POST = {
             type: 'paragraph',
             text: "Traditionally, a model that reconstructs behavior with interpretable cognitive parameters might be built using reinforcement learning (RL). It's the natural go-to — you define a reward function, and the agent learns a policy that maximizes it.",
         },
-        {
-            type: 'pullquote',
-            text: '"In biology, understanding beats performance — at least until you\'re ready to deploy."',
-        },
+        // {
+        //     type: 'pullquote',
+        //     text: '"In biology, understanding beats performance — at least until you\'re ready to deploy."',
+        // },
         {
             type: 'paragraph',
             text: "But it's a bit unsatisfying to say all behavior is reward or utility-driven. A mouse sniffing around an empty box isn't obviously trying to maximize anything — it's just curious. You can hack your reward function to fit curiosity in, but it feels like a patch rather than an explanation.",
@@ -82,16 +83,14 @@ const POST = {
         },
         {
             type: 'paragraph',
-            text: "The typical behavior is, naively, interpretable: the mouse is curious, so it explores the arena, sees the other mouse in a cage, goes to check out what's up with him, gets scared, and runs back to the shelter. You can see in this in the video below:",
+            text: "The typical behavior is, naively, interpretable: the mouse is curious, so it explores the arena, sees the other mouse in a cage, goes to check out what's up with him, gets scared, and runs back to the shelter. You can see this in the video below:",
         },
         {
             type: 'video',
             src: '/localassets/real_flight_example.mp4',
             caption: 'Exemplary flight behavior observed in the experiment',
         },
-        {
-            type: 'divider',
-        },
+        { type: 'divider' },
         {
             type: 'heading',
             text: "What a first-pass model looks like",
@@ -109,10 +108,10 @@ const POST = {
             type: 'paragraph',
             text: "But compared to real trajectories, it was close in some ways and obviously wrong in some ways. The real mice do things the simple model doesn't: they make ballistic flights back to the shelter — not just drift away from the cage, but _run_. They hesitate at the corridor entrance, peering into the chamber before committing. And their approach to the cage is deliberate and assessment-like, not just a noisy random walk driven by smell gradients.",
         },
-                {
+        {
             type: 'video',
-            src: '/localassets/M_only.mp4',
-            caption: 'Real mouse behaviors, flight and hesitation',
+            src: '/localassets/[PLACEHOLDER_flight_hesitation].mp4',
+            caption: 'Real mouse behaviors: flight and hesitation',
         },
         {
             type: 'paragraph',
@@ -163,9 +162,9 @@ const POST = {
         },
         {
             type: 'paragraph',
-            text: `This distinction matters for what the model is claiming about the underlying brain. A strict hierarchy would imply a specific kind of top-down control structure. A heterarchical one implies something more like a network  — which is what it becomes when you extend the model for more general situations.`,
+            text: `This distinction matters for what the model is claiming about the underlying brain. A strict hierarchy would imply a specific kind of top-down control structure. A heterarchical one implies something more like a network — which is what it becomes when you extend the model for more general situations.`,
         },
-        { type: 'divider'},
+        { type: 'divider' },
         {
             type: 'heading',
             text: `A behavioral episode, step by step`,
@@ -176,7 +175,7 @@ const POST = {
         },
         {
             type: 'video',
-            src: '',
+            src: '/localassets/[PLACEHOLDER_episode_walkthrough].mp4',
             caption: '',
         },
         {
@@ -213,7 +212,7 @@ const POST = {
         },
         {
             type: 'image',
-            src: '',
+            src: '/localassets/[PLACEHOLDER_figure4A].png',
             caption: 'Population-level metric distributions: real vs. model vs. random walk',
         },
         {
@@ -225,21 +224,143 @@ const POST = {
             text: `One practical note on the fitting: rather than running independent optimization for every mouse (which would have been computationally prohibitive), we generated a library of representative agents across the parameter space and then matched each mouse to the closest entry. It's a pragmatic approximation, but the 0.56σ median suggests the library had enough resolution to cover individual differences adequately.`,
         },
         {
-            type: 'image',
-            src: 'radar plots for anxious vs. curious mouse fits',
-            caption: 'Population-level metric distributions: real vs. model vs. random walk',
-        },
-        {
             type: 'paragraph',
             text: `The model also fits the two extreme phenotypes in the data — what we informally call "anxious" mice (high shelter time, rarely leaving the corridor) and "curious" mice (wide-ranging exploration, frequent cage investigation) — without any separate hand-coding. Those phenotypes emerge from different positions in the same parameter space.`,
         },
         {
-            type: 'paragraph',
-            text: `In a strict hierarchy, higher levels command lower levels. But that's not what's happening here. The Identification module (T) can override Motor's (M) preferences to drive approach. The Danger Context module (D) can also override M's preferences — but in the opposite direction, to drive escape. Neither T nor D is subordinate to the other. They're not arranged vertically; they're more like parallel controllers that compete to modulate the same downstream module depending on what the situation calls for.`,
+            type: 'image',
+            src: '/localassets/[PLACEHOLDER_figure4C].png',
+            caption: 'Radar plots for anxious vs. curious mouse fits',
+        },
+        {
+            type: 'image',
+            src: '/localassets/[PLACEHOLDER_figure5].png',
+            caption: 'Real vs. model trajectories: anxious, curious, flight, hesitation',
+        },
+        { type: 'divider' },
+        {
+            type: 'heading',
+            text: 'What does defeat actually change?',
         },
         {
             type: 'paragraph',
-            text: `In a strict hierarchy, higher levels command lower levels. But that's not what's happening here. The Identification module (T) can override Motor's (M) preferences to drive approach. The Danger Context module (D) can also override M's preferences — but in the opposite direction, to drive escape. Neither T nor D is subordinate to the other. They're not arranged vertically; they're more like parallel controllers that compete to modulate the same downstream module depending on what the situation calls for.`,
+            text: `This is arguably the most interesting part of the paper, and also where being honest about the numbers matters.`,
+        },
+        {
+            type: 'paragraph',
+            text: `We fit the model separately to each mouse's pre-defeat and post-defeat behavior, then looked at how each mouse moved in parameter space between sessions. The idea: if defeat systematically changes behavior, it should show up as a consistent directional shift in parameters — lower threshold for committing to "this is a threat," stronger preference for shelter, stronger aversion to the other mouse.`,
+        },
+        {
+            type: 'image',
+            src: '/localassets/[PLACEHOLDER_figure6A].png',
+            caption: '3D parameter space projections, pre→post, control vs. defeat groups',
+        },
+        {
+            type: 'paragraph',
+            text: `In the defeat group, the shifts are directional and consistent: mice start in different places (reflecting individual baseline differences) but move in a similar direction. In the control group, shifts are smaller and less consistent. The "trauma vectors" — the net direction of pre-to-post change for each group — point almost exactly opposite each other (cosθ = -0.96). The Mahalanobis distance between groups is 1.49, which is a large effect size.`,
+        },
+        {
+            type: 'paragraph',
+            text: `The catch: the permutation test p-value is 0.069. With n=6 defeated and n=7 control mice, the study is underpowered. We say so in the paper. The effect size is large enough to be biologically plausible, but the sample is too small to be conclusive. More data needed.`,
+        },
+        {
+            type: 'paragraph',
+            text: `What the model offers here, beyond just "defeat changes behavior," is a specific language for describing _what_ changed. Defeated mice have a lower threshold for classifying something as a threat and a stronger pull toward shelter. That's more specific than "they're more anxious," and it's a claim you can in principle test at the neural level — which is where the next section comes in.`,
+        },
+        { type: 'divider' },
+        {
+            type: 'heading',
+            text: 'Using the model to narrow down neural hypotheses',
+        },
+        {
+            type: 'paragraph',
+            text: `One of the reasons to build a normative model rather than a descriptive one is that it generates hypotheses you can test. The optogenetics section is the clearest illustration.`,
+        },
+        {
+            type: 'paragraph',
+            text: `Previous work from the Gross Lab (Krzywkowski et al., 2020) showed that optogenetic stimulation of the ventrolateral VMH (VMHvl) triggers escape in defeated mice but not in naive controls — a state-dependent effect. We hypothesized that the Danger Context module (D) parallels the functional role of the VMH in this circuit, and modeled stimulation as an exogenous push on D's belief state toward "danger."`,
+        },
+        {
+            type: 'paragraph',
+            text: `We tested three candidate hypotheses for what defeat does to the circuit:`,
+        },
+        {
+            type: 'paragraph',
+            text: `- **Sensitization (Model S)**: Defeat makes D more sensitive to T's input — it starts treating even distant threats as dangerous, expanding the spatial range over which "danger" is inferred.
+- **Biased identity priors (Model T)**: Defeat shifts T's prior toward "this is a threat" — hyper-vigilance at the identity-inference level.
+- **Biased context priors (Model D)**: Defeat shifts D's prior toward "the environment is unsafe" — a persistent background danger state, independent of what T is currently inferring.`,
+        },
+        {
+            type: 'paragraph',
+            text: `Under pre-defeat parameters, none of the three models produce flight under optogenetic stimulation — consistent with the biological controls. After applying defeat-induced parameter shifts, Models T and D both reproduce the elevated flight rates seen in defeated mice. Model S doesn't change the response under the conditions tested: because the relevant social encounters happen at a distance where the spatial-range manipulation doesn't alter the inferred state, expanding threat sensitivity has no effect here.`,
+        },
+        {
+            type: 'image',
+            src: '/localassets/[PLACEHOLDER_figure7].png',
+            caption: 'Flight rates pre vs. post defeat, real vs. model S/T/D',
+        },
+        {
+            type: 'paragraph',
+            text: `This leaves T and D computationally degenerate under the existing experiment — you can't distinguish between them from the data we have. But the model immediately suggests a clean test: run VMH stimulation in defeated mice _in the absence of a conspecific_.`,
+        },
+        {
+            type: 'pullquote',
+            text: 'Model D predicts escape: the environment already feels dangerous, and the stimulation tips D over its threshold. Model T predicts little or no response: without an ambiguous social stimulus to classify, T has nothing to act on.',
+        },
+        {
+            type: 'paragraph',
+            text: `That experiment hasn't been run, as far as we know. But it fell out of the model naturally — which is, ultimately, the point of building a normative model in the first place.`,
+        },
+        { type: 'divider' },
+        {
+            type: 'heading',
+            text: "What the model doesn't do (yet)",
+        },
+        {
+            type: 'paragraph',
+            text: `Honest accounting of the gaps:`,
+        },
+        {
+            type: 'paragraph',
+            text: `- **Thigmotaxis** — wall-hugging, a standard anxiety readout in open field tests, isn't modeled
+- **Social buffering** — presence of a familiar conspecific reduces fear responses; not captured here
+- **Context-dependent fear** — conditioned place aversion, context generalization, etc.
+- **Habituation** — repeated exposure reduces responding; the model doesn't update across sessions
+- **Postural and kinematic features** — we fit to centroid trajectories only, not body orientation, stretch-attend postures, or freezing microstructure`,
+        },
+        {
+            type: 'paragraph',
+            text: `Many of these could be added as additional state factors or observation channels. The modular structure was designed with extensibility in mind. But they're not here yet.`,
+        },
+        {
+            type: 'paragraph',
+            text: `The fitting also admits multiple behaviorally equivalent solutions — parameters that match the behavioral metrics don't uniquely identify the "true" parameters in a circuit sense. That limits the strength of the neural inferences for now, and it's something that would need to be addressed before the model could be used to make strong claims about specific circuits.`,
+        },
+        { type: 'divider' },
+        {
+            type: 'heading',
+            text: 'Where this goes',
+        },
+        {
+            type: 'paragraph',
+            text: `The immediate practical next step is more data — larger cohorts to properly test the defeat-induced parameter shifts, and ideally concurrent neural recordings to validate the module-to-circuit mappings rather than just proposing them.`,
+        },
+        {
+            type: 'paragraph',
+            text: `The longer-term goal is the original one: a modular normative model general enough to cover multiple behavioral domains. The architecture here was built for social defeat, but foraging, multi-agent interactions, conditioned fear, and open-field exploration all fit the active inference framework in principle. Whether the same modular structure extends, or whether different domains need different organizations, is an open question.`,
+        },
+        { type: 'divider' },
+        {
+            type: 'heading',
+            text: 'Code and data',
+        },
+        {
+            type: 'paragraph',
+            text: `All code is available at [https://github.com/hridaik/social-defeat](https://github.com/hridaik/social-defeat).`,
+        },
+        {
+            type: 'paragraph',
+            text: `The paper: _Fleeing is Believing: Adaptive behavior under social threat as an inference process_ — Khurana, Mussetto, Gross, Bufacchi. EMBL Rome. [bioRxiv](https://www.biorxiv.org/content/10.64898/2026.02.17.706393v1)`,
         },
     ],
 };
