@@ -6,13 +6,22 @@ import ReactMarkdown from 'react-markdown';
 
 const PROJECTS = [
     {
+        id: 'p-20262',
+        year: 2026,
+        name: 'Coupling & Current',
+        date: 'June 2026',
+        collab: '',
+        repo: '/current',
+        desc: "Investigating structure-function mismatch in biological systems with a stochastic perspective. Work in progress - refer to blog post [here](current)",
+    },
+    {
         id: 'p-20261',
         year: 2026,
         name: 'Bayesian Agent Networks',
         date: 'Feb 2026',
         collab: 'R Buffachi, V Mussetto, C Gross',
-        repo: 'https://doi.org/10.64898/2026.02.17.706393',
-        desc: "Hierarchical active inference model of naturalistic defensive mouse behavior, in social defeat. The modular network architecture of active inference (bayesian inference + action) agents enables natural extension to other behavioral domains including foraging and multi-agent interactions, representing a foundational step toward interpretable models of general mouse behavior.\n\n [Here](blog) is the paper in blog format. *Under review, pre-print on bioRxiv.* Part of my thesis.",
+        repo: '/blog',
+        desc: "Hierarchical active inference model of naturalistic defensive mouse behavior, in social defeat. The modular network architecture of active inference (bayesian inference + action) agents enables natural extension to other behavioral domains including foraging and multi-agent interactions, representing a foundational step toward interpretable models of general mouse behavior.\n\n [Here](blog) is the paper in blog format. *Published in Front. Neural Circuits, 2026* Part of my thesis.",
     },
     {
         id: 'p-20251',
@@ -206,7 +215,7 @@ function Projects() {
                                     <pre className='formatted'>
                                         Here are some samples of (public) work I have done. Likely doesn't represent tech/science stuff I've done (which is most of what I've done) - <b>see the other projects on the left.</b> <br></br>  <br></br>The samples given below are publicly available and not binding to any confidentiality agreements. Broken links may indicate the owner has removed the content.
                                         <ul>
-                                            <li><a href='https://www.biorxiv.org/content/10.64898/2026.02.17.706393v1.full' target='_blank' rel="noopener noreferrer">Interpretable Model of Mouse Behavior (pre-print)</a></li>
+                                            <li><a href='/blog' target='_blank' rel="noopener noreferrer">Interpretable Model of Mouse Behavior (published in Front. Neural Circuits)</a></li>
                                             <li><a href='https://intel.ly/40jxwVR' target='_blank' rel="noopener noreferrer">Content for Intel Startup Program's Coffee Table Book</a></li>
                                             <li><a href='https://vimeo.com/794789295/ff3d0493fe' target='_blank' rel="noopener noreferrer">Video Script for Lenovo &amp; OEM Partner meldCX</a></li>
                                             <li><a href='https://vimeo.com/842508780/17e8fe9722' target='_blank' rel="noopener noreferrer">Video Script for Lenovo &amp; OEM Partner iOmniscient</a></li>

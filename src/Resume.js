@@ -32,7 +32,7 @@ function Resume() {
                     <h2 className='res-sub'>European Molecular Biology Laboratory (EMBL)</h2>
                     <h3 className='res-date'>Sep 2025 - Present</h3>
                         <p className='res-text'>{embl}</p>
-                        <a href='https://www.biorxiv.org/content/10.64898/2026.02.17.706393v1.full' rel="noopener noreferrer" target="_blank"><p className='res-text'>Recent work on mouse behavior models</p></a>
+                        <a href='/blog' rel="noopener noreferrer" target="_blank"><p className='res-text'>Recent work on mouse behavior models</p></a>
 
                 <h2 className='res-sub grad'>Associate</h2>
                     <h2 className='res-sub'>Boston Consulting Group (BCG)</h2>

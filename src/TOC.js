@@ -1,11 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 
 export function slugify(text) {
     return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
 
+function stripMarkdown(text) {
+    return text.replace(/[*_`]/g, '');
+}
+
 function TOC({ sections }) {
-    const headings = sections.filter(s => s.type === 'heading');
+    const headings = useMemo(() => sections.filter(s => s.type === 'heading'), [sections]);
     const [active, setActive] = useState(null);
 
     useEffect(() => {
@@ -38,8 +42,9 @@ function TOC({ sections }) {
                             key={idx}
                             href={`#${id}`}
                             className={`toc-item${active === id ? ' toc-active' : ''}`}
+                            onClick={() => setActive(id)}
                         >
-                            <span className="toc-label">{h.text}</span>
+                            <span className="toc-label">{stripMarkdown(h.text)}</span>
                             <span className="toc-dot" />
                         </a>
                     );

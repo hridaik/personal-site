@@ -5,6 +5,7 @@ import TOC, { slugify } from './TOC';
 import { NavLink } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // BLOG POST - edit everything below to update the post.
@@ -121,11 +122,6 @@ const POST = {
             text: "But compared to real trajectories, it was close in some ways and obviously wrong in some ways. The real mice do things the simple model doesn't: they make ballistic flights back to the shelter - not just drift away from the cage, but _run_. They hesitate at the corridor entrance, peering into the chamber before committing. And their approach to the cage is deliberate and assessment-like, not just a noisy random walk driven by smell gradients.",
         },
         {
-            type: 'video',
-            src: '/localassets/[PLACEHOLDER_flight_hesitation].mp4',
-            caption: 'Real mouse behaviors: flight and hesitation',
-        },
-        {
             type: 'paragraph',
             text: "The failures point to what's missing.",
         },
@@ -187,7 +183,7 @@ const POST = {
         },
         {
             type: 'video',
-            src: '/localassets/[PLACEHOLDER_episode_walkthrough].mp4',
+            src: '/localassets/illustrative_trajectory.mp4',
             caption: '',
         },
         {
@@ -224,8 +220,8 @@ const POST = {
         },
         {
             type: 'image',
-            src: '/localassets/[PLACEHOLDER_figure4A].png',
-            caption: 'Population-level metric distributions: real vs. model vs. random walk',
+            src: '/localassets/Fig4new.jpg',
+            caption: 'Model fit and comparison',
         },
         {
             type: 'paragraph',
@@ -241,12 +237,7 @@ const POST = {
         },
         {
             type: 'image',
-            src: '/localassets/[PLACEHOLDER_figure4C].png',
-            caption: 'Radar plots for anxious vs. curious mouse fits',
-        },
-        {
-            type: 'image',
-            src: '/localassets/[PLACEHOLDER_figure5].png',
+            src: '/localassets/Fig5.png',
             caption: 'Real vs. model trajectories: anxious, curious, flight, hesitation',
         },
         { type: 'divider' },
@@ -260,7 +251,7 @@ const POST = {
         },
         {
             type: 'image',
-            src: '/localassets/[PLACEHOLDER_figure6A].png',
+            src: '/localassets/Figure6.png',
             caption: '3D parameter space projections, pre→post, control vs. defeat groups',
         },
         {
@@ -304,7 +295,7 @@ const POST = {
         },
         {
             type: 'image',
-            src: '/localassets/[PLACEHOLDER_figure7].png',
+            src: '/localassets/Figure7.png',
             caption: 'Flight rates pre vs. post defeat, real vs. model S/T/D',
         },
         {
@@ -388,7 +379,7 @@ function renderSection(section, idx) {
             return <h3 key={idx} className="blog-subheading">{section.text}</h3>;
 
         case 'paragraph':
-            return <ReactMarkdown key={idx} className="blog-body">{section.text}</ReactMarkdown>;
+            return <ReactMarkdown key={idx} className="blog-body" remarkPlugins={[remarkGfm]}>{section.text}</ReactMarkdown>;
 
         case 'pullquote':
             return (
@@ -456,6 +447,7 @@ function Blog() {
 
                         {POST.links && (
                             <div className="blog-links">
+                                <span className="blog-links-label">Read full publications</span>
                                 {POST.links.map((link, idx) => (
                                     <a key={idx} href={link.href} target="_blank" rel="noopener noreferrer" className="blog-link-pill">
                                         {link.label}
@@ -466,7 +458,7 @@ function Blog() {
 
                         <div className="blog-read-also">
                             <span className="blog-read-also-label">Read also</span>
-                            <NavLink to="/current" className="blog-read-also-link">[Post title]</NavLink>
+                            <NavLink to="/current" className="blog-read-also-link">One wiring, two functions</NavLink>
                         </div>
 
                         {POST.sections.map((section, idx) => renderSection(section, idx))}
