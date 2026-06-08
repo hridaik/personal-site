@@ -49,7 +49,7 @@ const POST = {
         { type: 'subheading', text: 'Short summary' },
         {
             type: 'video',
-            src: 'localassets/current_summary.mp4',
+            src: '/localassets/current_summary.mp4',
             caption: 'Video summary',
         },
         { type: 'divider' },
