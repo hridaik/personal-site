@@ -6,6 +6,7 @@ import Projects from './Projects';
 import Resume from './Resume';
 import Contact from './Contact';
 import Blog from './Blog';
+import Current from './Current';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 
@@ -17,6 +18,7 @@ ReactDOM.render(
       <Route path="/resume" element={<Resume />} />
       <Route path='/contact' element={<Contact />} />
       <Route path='/blog' element={<Blog />} />
+      <Route path='/current' element={<Current />} />
     </Routes>
   </Router>,
   document.getElementById('root')
