@@ -401,14 +401,12 @@ function renderSection(section, idx) {
         case 'video':
             return (
                 <figure key={idx}>
-                    <div className="blog-video-wrap">
-                        <iframe
-                            src={section.src}
-                            title={section.caption || 'Embedded video'}
-                            allow="autoplay; fullscreen; picture-in-picture"
-                            allowFullScreen
-                        />
-                    </div>
+                    <video
+                        src={section.src}
+                        controls
+                        playsInline
+                        style={{ width: '100%', display: 'block', border: '1px solid rgba(0,0,0,0.12)' }}
+                    />
                     {section.caption && (
                         <figcaption className="blog-caption">{section.caption}</figcaption>
                     )}
