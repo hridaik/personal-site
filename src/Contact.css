@@ -30,6 +30,8 @@
     letter-spacing: 0.05em;
 }
 
+.contactEmail + .contactEmail { margin-top: 0.5rem; }
+
 .contactEmail:hover {
     color: #b70b30;
 }

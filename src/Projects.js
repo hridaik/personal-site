@@ -6,20 +6,38 @@ import ReactMarkdown from 'react-markdown';
 
 const PROJECTS = [
     {
+        id: 'p-20263',
+        year: 2026,
+        name: 'Stealth Startup',
+        date: '2026 - Present',
+        collab: '',
+        repo: '',
+        desc: "AI for cell therapy manufacturing: making engineered cells a reliable, affordable way to restore health. Details to follow.",
+    },
+    {
+        id: 'p-20264',
+        year: 2026,
+        name: 'Oscillatory Basal Ganglia Model',
+        date: '2026',
+        collab: 'Chandrasekaran, Chakravarthy (IIT Madras)',
+        repo: 'https://doi.org/10.1016/j.neunet.2026.109873',
+        desc: "An oscillatory deep neural network architecture (Hopf-oscillator units in place of standard activations) applied in a basal ganglia reinforcement learning model of interval timing, reproducing behavior in healthy, Parkinson's and schizophrenia conditions. *Published in Neural Networks, 2026.* Related earlier explorations: Phase Amplitude Coupling and Auditory Cortex.",
+    },
+    {
         id: 'p-20262',
         year: 2026,
         name: 'Coupling & Current',
         date: 'June 2026',
         collab: '',
         repo: '/current',
-        desc: "Investigating structure-function mismatch in biological systems with a stochastic perspective. Work in progress - refer to blog post [here](current)",
+        desc: "Investigating structure-function mismatch in biological systems with a stochastic perspective. Work in progress - refer to blog post [here](current). Preliminary draft of a paper in preparation.",
     },
     {
         id: 'p-20261',
         year: 2026,
         name: 'Bayesian Agent Networks',
         date: 'Feb 2026',
-        collab: 'R Buffachi, V Mussetto, C Gross',
+        collab: 'R Bufacchi, V Mussetto, C Gross',
         repo: '/blog',
         desc: "Hierarchical active inference model of naturalistic defensive mouse behavior, in social defeat. The modular network architecture of active inference (bayesian inference + action) agents enables natural extension to other behavioral domains including foraging and multi-agent interactions, representing a foundational step toward interpretable models of general mouse behavior.\n\n [Here](blog) is the paper in blog format. *Published in Front. Neural Circuits, 2026* Part of my thesis.",
     },
@@ -146,12 +164,12 @@ const PROJECTS = [
 const years = [...new Set(PROJECTS.map(p => p.year))].sort((a, b) => b - a);
 
 function Projects() {
-    const [activeId, setActiveId] = useState('worksample');
+    const [activeId, setActiveId] = useState('overview');
 
-    const isSample = activeId === 'worksample';
-    const project = isSample ? null : PROJECTS.find(p => p.id === activeId);
+    const isOverview = activeId === 'overview';
+    const project = isOverview ? null : PROJECTS.find(p => p.id === activeId);
 
-    const projName = isSample ? 'Work Samples' : project?.name ?? '';
+    const projName = isOverview ? 'Start here' : project?.name ?? '';
     const date = project?.date ?? '';
     const collab = project?.collab ?? '';
     const repo = project?.repo ?? '';
@@ -167,11 +185,11 @@ function Projects() {
                 <div className='navpane' role="list" aria-label="Project list">
                     <div className='pane-div' role="listitem">
                         <button
-                            className={`pane-btn${activeId === 'worksample' ? ' chosen' : ''}`}
-                            onClick={() => setActiveId('worksample')}
-                            aria-current={activeId === 'worksample' ? 'true' : undefined}
+                            className={`pane-btn${activeId === 'overview' ? ' chosen' : ''}`}
+                            onClick={() => setActiveId('overview')}
+                            aria-current={activeId === 'overview' ? 'true' : undefined}
                         >
-                            Work Samples
+                            Start here
                         </button>
                     </div>
 
@@ -205,22 +223,23 @@ function Projects() {
                             {repo && (
                                 <a href={repo} target="_blank" rel="noopener noreferrer"><h2>{repo}</h2></a>
                             )}
-                            {!isSample && <h2>Collaborators: {collab}</h2>}
+                            {!isOverview && <h2>Collaborators: {collab}</h2>}
                         </div>
                     </div>
                     <div className='container'>
                         <div className='projdesc'>
                             <div className='desccon'>
-                                {isSample ? (
-                                    <pre className='formatted'>
-                                        Here are some samples of (public) work I have done. Likely doesn't represent tech/science stuff I've done (which is most of what I've done) - <b>see the other projects on the left.</b> <br></br>  <br></br>The samples given below are publicly available and not binding to any confidentiality agreements. Broken links may indicate the owner has removed the content.
+                                {isOverview ? (
+                                    <div className='formatted' style={{ whiteSpace: 'normal' }}>
+                                        <p>Welcome. The list on the left holds everything I have built, newest first, from current research to a website I made when I was eight. Most of it is science and machine learning; the older items show where it started. Each entry has a short description, a date, and a link to the code or write-up where one exists.</p>
+                                        <p>If you only have a few minutes, start here:</p>
                                         <ul>
-                                            <li><a href='/blog' target='_blank' rel="noopener noreferrer">Interpretable Model of Mouse Behavior (published in Front. Neural Circuits)</a></li>
-                                            <li><a href='https://intel.ly/40jxwVR' target='_blank' rel="noopener noreferrer">Content for Intel Startup Program's Coffee Table Book</a></li>
-                                            <li><a href='https://vimeo.com/794789295/ff3d0493fe' target='_blank' rel="noopener noreferrer">Video Script for Lenovo &amp; OEM Partner meldCX</a></li>
-                                            <li><a href='https://vimeo.com/842508780/17e8fe9722' target='_blank' rel="noopener noreferrer">Video Script for Lenovo &amp; OEM Partner iOmniscient</a></li>
+                                            <li><b>Research, published:</b> <a href='/blog' target='_blank' rel="noopener noreferrer">Fleeing is Believing</a>, an interpretable model of mouse defensive behavior (<i>Front. Neural Circuits</i>, 2026), written up as a blog post.</li>
+                                            <li><b>Research, published:</b> <a href='https://doi.org/10.1016/j.neunet.2026.109873' target='_blank' rel="noopener noreferrer">Oscillatory Basal Ganglia Model of Timing Behaviors in Parkinson's Disease and Schizophrenia</a> (second author, <i>Neural Networks</i>, 2026).</li>
+                                            <li><b>First game:</b> <button className='inline-link' onClick={() => setActiveId('p-2017')}>TicTacToe</button>, one of my first coding projects, playable against the computer.</li>
+                                            <li><b>First project:</b> <button className='inline-link' onClick={() => setActiveId('p-2011')}>The ecommerce website</button> I built at age 8 to sell things I no longer wanted.</li>
                                         </ul>
-                                    </pre>
+                                    </div>
                                 ) : (
                                     <ReactMarkdown className='formatted'>{projDesc}</ReactMarkdown>
                                 )}

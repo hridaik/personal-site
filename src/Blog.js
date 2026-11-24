@@ -23,7 +23,7 @@ import remarkGfm from 'remark-gfm';
 const POST = {
     title: 'Fleeing is Believing',
     subtitle: 'Building a normative, interpretable model of general mouse behavior - starting with defensive behavior',
-    date: 'April 2026',
+    date: 'June 2026',
     links: [
         {
             label: 'Khurana et al., Front. Neural Circuits (2026)',

@@ -1,7 +1,7 @@
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook, faBriefcase, faEnvelope, faAdjust } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedinIn, faStackExchange, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faBook, faFlask, faGraduationCap, faEnvelope, faAdjust } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedinIn, faOrcid, faGithub } from '@fortawesome/free-brands-svg-icons';
 import React from "react";
 import {NavLink} from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -15,7 +15,7 @@ function App() {
         <div className='hero'>
           <h1 className='hero-text'>Hridai Khurana</h1>
           <div className='nnn'><FontAwesomeIcon className="git" icon={faBook} color='black' size="lg"/><h1 className='cred'>BIOTECH + COMP ENG, IIT MADRAS</h1></div>
-          <div className='nnn'><FontAwesomeIcon className="git" icon={faBriefcase} color='black' size="lg"/><h1 className='cred'>EMBL Rome</h1></div>
+          <div className='nnn'><FontAwesomeIcon className="git" icon={faFlask} color='black' size="lg"/><h1 className='cred'>EMBL, STEALTH STARTUP</h1></div>
         </div>
         <NavLink to='/resume' className='resume-link' style={{ textDecoration: 'none' }} >
         <div className='resume nav'>
@@ -37,7 +37,8 @@ function App() {
         <h1 className='nav-text'>REACH OUT TO ME</h1>
           <div className='nnn'>
             <a className="links" href="https://www.linkedin.com/in/hridaik/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FontAwesomeIcon className="socials" icon={faLinkedinIn} color='black' size='2x'/></a>
-            <a className="links" href="https://stackexchange.com/users/14140394/hridai-khurana?tab=accounts" target="_blank" rel="noopener noreferrer" aria-label="Stack Exchange"><FontAwesomeIcon className="socials" icon={faStackExchange} color='black' size='2x'/></a>
+            <a className="links" href="https://orcid.org/0009-0001-6084-063X" target="_blank" rel="noopener noreferrer" aria-label="ORCID"><FontAwesomeIcon className="socials" icon={faOrcid} color='black' size='2x'/></a>
+            <a className="links" href="https://scholar.google.com/citations?user=sQvNT7sAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar"><FontAwesomeIcon className="socials" icon={faGraduationCap} color='black' size='2x'/></a>
             <NavLink to='/contact' style={{ textDecoration: 'none', marginRight: "2%" }} aria-label="Contact"><FontAwesomeIcon className="socials" icon={faEnvelope} color='black' size='2x'/></NavLink>
             <a href="https://github.com/hridaik/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FontAwesomeIcon className="git" icon={faGithub} color='black' size='2x'/></a>
           </div>
