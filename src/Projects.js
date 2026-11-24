@@ -6,13 +6,13 @@ import ReactMarkdown from 'react-markdown';
 
 const PROJECTS = [
     {
-        id: 'p-20263',
+        id: 'p-20265',
         year: 2026,
-        name: 'Stealth Startup',
-        date: '2026 - Present',
+        name: 'Emergent Control',
+        date: 'Nov 2026',
         collab: '',
-        repo: '',
-        desc: "AI for cell therapy manufacturing: making engineered cells a reliable, affordable way to restore health. Details to follow.",
+        repo: 'https://github.com/hridaik/fuzzy-blankets',
+        desc: `Identifying and controlling emergent collectives. Treating individuality as graded and observer-dependent, I'm developing mathematical methods to detect emergent collectives, find where they can be influenced, and retask them without destroying them. The boundary that makes a collective a "thing" isn't necessarily the lever that moves it, and because identity comes in layers (a collective can keep its memory while every part is replaced), steering can mean retasking, splitting or dissolving it, not just preserving it.\n\nDemos on a simulated flock and a model of morphogenesis (fun to look at/play with):\n- [Flock: boundaries, control and movement](/demos/flock/)\n- [Morphogenesis: cell clusters that remember](/demos/morphogenesis/)\n*Work in progress.*`,
     },
     {
         id: 'p-20264',
@@ -160,7 +160,7 @@ const PROJECTS = [
     },
 ];
 
-// Group projects by year for rendering the sidebar
+
 const years = [...new Set(PROJECTS.map(p => p.year))].sort((a, b) => b - a);
 
 function Projects() {
@@ -231,13 +231,14 @@ function Projects() {
                             <div className='desccon'>
                                 {isOverview ? (
                                     <div className='formatted' style={{ whiteSpace: 'normal' }}>
-                                        <p>Welcome. The list on the left holds some things I have built, newest first, from current research to a website I made when I was eight. Most of it is science and machine learning, the older items show where it started. Each entry has a short description, a date, and a link to the code or write-up where one exists.</p>
+                                        <p>Welcome. The list on the left holds some things I have built, newest first, from current research to a website I made when I was eight. Most of it is science and machine learning, the older items show where it started. Each has a short description and a link to the code or write-up where one exists.</p>
                                         <p>If you only have a few minutes, start here:</p>
                                         <ul>
                                             <li><b>Research, published:</b> <a href='/blog' target='_blank' rel="noopener noreferrer">Fleeing is Believing</a>, an interpretable model of mouse defensive behavior (<i>Front. Neural Circuits</i>, 2026), written up as a blog post.</li>
                                             <li><b>Research, published:</b> <a href='https://doi.org/10.1016/j.neunet.2026.109873' target='_blank' rel="noopener noreferrer">Oscillatory Basal Ganglia Model of Timing Behaviors in Parkinson's Disease and Schizophrenia</a> (<i>Neural Networks</i>, 2026).</li>
                                             <li><b>First game:</b> <button className='inline-link' onClick={() => setActiveId('p-2017')}>TicTacToe</button>, one of my first coding projects, playable against the computer.</li>
                                             <li><b>First project:</b> <button className='inline-link' onClick={() => setActiveId('p-2011')}>The ecommerce website</button> I built at age 8 to sell things I no longer wanted.</li>
+                                            <li><b>Right now (work in progress):</b> <button className='inline-link' onClick={() => setActiveId('p-20265')}>Emergent Control</button>, detecting and steering emergent multi-agent collectives, with some cool demos you can check out; <a href='/current' target='_blank' rel="noopener noreferrer">Coupling &amp; Current</a>, non-equilibrium stochastic dynamics to separate stable coupling from state-supported coordination</li>
                                         </ul>
                                     </div>
                                 ) : (
