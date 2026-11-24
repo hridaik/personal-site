@@ -231,11 +231,11 @@ function Projects() {
                             <div className='desccon'>
                                 {isOverview ? (
                                     <div className='formatted' style={{ whiteSpace: 'normal' }}>
-                                        <p>Welcome. The list on the left holds everything I have built, newest first, from current research to a website I made when I was eight. Most of it is science and machine learning; the older items show where it started. Each entry has a short description, a date, and a link to the code or write-up where one exists.</p>
+                                        <p>Welcome. The list on the left holds some things I have built, newest first, from current research to a website I made when I was eight. Most of it is science and machine learning, the older items show where it started. Each entry has a short description, a date, and a link to the code or write-up where one exists.</p>
                                         <p>If you only have a few minutes, start here:</p>
                                         <ul>
                                             <li><b>Research, published:</b> <a href='/blog' target='_blank' rel="noopener noreferrer">Fleeing is Believing</a>, an interpretable model of mouse defensive behavior (<i>Front. Neural Circuits</i>, 2026), written up as a blog post.</li>
-                                            <li><b>Research, published:</b> <a href='https://doi.org/10.1016/j.neunet.2026.109873' target='_blank' rel="noopener noreferrer">Oscillatory Basal Ganglia Model of Timing Behaviors in Parkinson's Disease and Schizophrenia</a> (second author, <i>Neural Networks</i>, 2026).</li>
+                                            <li><b>Research, published:</b> <a href='https://doi.org/10.1016/j.neunet.2026.109873' target='_blank' rel="noopener noreferrer">Oscillatory Basal Ganglia Model of Timing Behaviors in Parkinson's Disease and Schizophrenia</a> (<i>Neural Networks</i>, 2026).</li>
                                             <li><b>First game:</b> <button className='inline-link' onClick={() => setActiveId('p-2017')}>TicTacToe</button>, one of my first coding projects, playable against the computer.</li>
                                             <li><b>First project:</b> <button className='inline-link' onClick={() => setActiveId('p-2011')}>The ecommerce website</button> I built at age 8 to sell things I no longer wanted.</li>
                                         </ul>

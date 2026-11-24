@@ -4,12 +4,12 @@ import Nav from './Nav';
 import { AnimatePresence, motion } from 'framer-motion';
 
 
-const aboutText = 'Computational biologist building interpretable models that make biological systems more predictable and, eventually, controllable, from cognition and behavior to cell programming. I want engineered cells to become a reliable, affordable way to restore health, produce food and create useful materials, and therapies that work in the lab to reach the patients who need them.';
-const stealth = 'Building AI to make cell therapy manufacturing faster and cheaper.';
+const aboutText = 'Computational biologist building interpretable models that make biological systems more predictable and, eventually, controllable, from cognition and behavior to cell programming. I want engineered cells to become a reliable, affordable way to restore health, produce food and create useful materials - and therapies that work in the lab to reach the patients who need them.';
+const stealth = 'AI to make more accessible cell therapies with faster & cheaper manufacturing.';
 const embl = 'Bayesian generative models of cognition and adaptive behavior, and analysis of non-equilibrium biological network dynamics. First-author paper in Frontiers in Neural Circuits. Developing a framework to separate stable coupling from state-supported coordination in biological time series.';
 const iitmResearch = "Developed an oscillatory deep neural network architecture, with Hopf-oscillator units in place of standard activations, and applied it in a basal ganglia reinforcement learning model of interval timing. It reproduces experimental behavior in healthy, Parkinson's and schizophrenia conditions. Second author, Neural Networks (2026).";
-const bcg = "Chairman's office at a Fortune Global 200 energy major. Critical materials strategy, including an inventory management model for $500M+ of critical materials, unlocking $100M+ in potential savings.";
-const cellforma = 'Sole computational contributor at a regenerative cell therapy startup. Applied geometric deep learning and generative chemistry to optimize cellular reprogramming.';
+const bcg = "Chairman's office at a Fortune Global 200 energy major. Critical materials strategy, including an inventory management model for $500M+ of critical materials, unlocking $100M+ in potential savings. Received a full-time offer.";
+const cellforma = 'Sole computational contributor at a regenerative lung cell therapy startup. Applied geometric deep learning and generative chemistry to optimize differentiation protocols.';
 const schrocken = "Worked with the Head of Product to help design the functionality and UI of Schrocken's MVP for Cell and Gene Therapy applications. Solely revamped their messaging and content on their website, using storytelling techniques for an engaging, easy-to-understand user experience tailored to the target demographic for each webpage.";
 const storyproc = 'Providing a link between our tech and business teams, making sure our product is matching customer expectation and our vision, from functionality to usability. On the tech side, a lot of NLP, working with GPT3, music generation with Magenta/TensorFlow, managing a nodeJS backend and implementing a no-code frontend and database in bubble.io. On the business side, worked on everything from prospecting, handling sales calls, content writing, as well as client calls after closing the sale. Storytelling as a science, not necessarily an art.';
 const ey = 'On an ad-hoc project, built a model that infers transport mode (car, bike, walking) from phone GPS data, achieving over 85% accuracy, and integrated it into the app. Used to measure human inefficiency in perishable product supply chains.';
@@ -23,7 +23,7 @@ const PUBLICATIONS = [
 ];
 
 const AWARDS = [
-    'Winner, Boston Consulting Group Bruce Henderson Insight Competition, selected from 10,000+ candidates across top Indian universities',
+    'Winner, Boston Consulting Group Bruce Henderson Insight Competition, selected from 10,000+ candidates across top Indian universities. Winning pitch for a CDMO (contract manufacturer) of biologics in microgravity',
     'Peer reviewer, PLOS Computational Biology (2026)',
     'State- and national-level basketball player in India',
 ];
@@ -65,8 +65,8 @@ function Resume() {
                     <p className='res-text grey'>{aboutText}</p>
                     <p className='res-text'><a href='https://orcid.org/0009-0001-6084-063X' rel="noopener noreferrer" target="_blank">ORCID</a> &middot; <a href='https://scholar.google.com/citations?user=sQvNT7sAAAAJ&hl=en' rel="noopener noreferrer" target="_blank">Google Scholar</a></p>
 
-                <h1>Work Experience</h1>
-                <Entry role='Founder' org='Stealth startup' date='2026 - Present'>
+                <h1>Experience</h1>
+                <Entry role='Founder' org='Stealth Startup' date='2026 - Present'>
                     <p className='res-text'>{stealth}</p>
                 </Entry>
 
@@ -76,7 +76,7 @@ function Resume() {
                     <a href='/current' rel="noopener noreferrer" target="_blank"><p className='res-text'>Work in progress on coupling and current</p></a>
                 </Entry>
 
-                <Entry role='Research Intern' org='IIT Madras (Prof. V. Srinivasa Chakravarthy)' date='Aug 2025 - Apr 2026'>
+                <Entry role='Research Intern' org='IIT Madras (Computational Neuroscience Lab)' date='Aug 2025 - Apr 2026'>
                     <p className='res-text'>{iitmResearch}</p>
                 </Entry>
 
@@ -88,7 +88,7 @@ function Resume() {
                     <p className='res-text'>{cellforma}</p>
                 </Entry>
 
-                <Entry role='Product Intern' org='Schrocken' date='Jun 2023 to Sept 2023'>
+                <Entry role='Product Intern' org='Collabrix (fka Schrocken)' date='Jun 2023 to Sept 2023'>
                     <p className='res-text'>{schrocken}</p>
                 </Entry>
 
